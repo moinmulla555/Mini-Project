@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parlour</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
+        body {
+            margin: 0px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(65, 57, 57);
+            height: 90px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav:hover {
+            color: #000;
+        }
+
+        /*  navbar media query starts*/
+        @media (max-width:576px) {
+            .name {
+                font-size: 20px;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .nav {
+                font-size: 15px;
+            }
+
+            .hide {
+                display: none;
+            }
+        }
+
+        /* navbar media query end*/
+
+
+
+        .img {
+            background-image: url(./Assets/brush-makeup-bokeh-lights.jpg);
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .img-parent {
+            color: antiquewhite;
+            margin: 0px;
+            width: 50%;
+            padding: 30px 20px 20px 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .img-parent:hover {
+            background-color: #614f4f;
+            border-radius: 40px;
+        }
+
+
+        .btn {
+            height: 40px;
+            width: 180px;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 18px;
+            background-color: rgb(214, 147, 21);
+            border: none;
+            border-radius: 12px;
+            margin-left: 17vw;
+            margin-bottom: 20px;
+        }
+
+
+        .btn:hover {
+            background-color: black;
+            color: rgb(214, 147, 21);
+        }
+
+
+        .title {
+            margin: 1px;
+            font-size: 70px;
+            padding-left: 80px;
+            font-weight: bolder;
+        }
+
+        .title1 {
+            font-size: 50px;
+            margin: 10px 0px;
+            padding-left: 20px;
+        }
+
+        .title2 {
+            font-size: 25px;
+            color: rgb(214, 147, 21);
+            padding-left: 23vh;
+            margin-top: 4vh;
+        }
+
+        .title3 {
+            font-size: 20px;
+            padding-left: 2vh;
+            color: white;
+            font-weight: bold;
+        }
+
+        @media (max-width:576px) {
+
+
+            .img-parent {
+                width: 420px
+            }
+
+            .title {
+                font-size: 40px;
+                padding-right: 10px;
+
+
+            }
+
+            .title1 {
+                font-size: 30px;
+                padding-left: 35px;
+            }
+
+            .title2 {
+                font-size: 25px;
+                padding: 0px 20px 0px 70px;
+                margin: 20px 0px 20px 0px;
+            }
+
+            .title3 {
+                font-size: 15px;
+                margin: 0px 0px 0px 20px;
+                padding-left: 20px;
+            }
+
+            .btn {
+                margin: 40px 0px 20px 120px;
+
+            }
+
+        }
+
+
+
+
+        .main-about {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .about {
+            display: flex;
+        }
+
+        .head-about {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bolder;
+            margin: 10px 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-para {
+            font-size: 21px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .img-about {
+            padding: 30px;
+        }
+
+        .about-img {
+            border-radius: 20px;
+
+        }
+
+        .text-about {
+            padding: 15px;
+        }
+
+
+        /* about meadia query  */
+
+        @media(max-width:576px) {
+
+            .about {
+                display: block;
+            }
+
+            .head-about {
+                font-size: 30px;
+            }
+
+            .about-para {
+                font-size: 15px
+            }
+
+            .about-img {
+                height: 220px;
+                width: 400px;
+                margin-left: 30px;
+            }
+
+        }
+
+        /* about media query finish */
+
+
+
+        .card-parent {
+            display: flex;
+            margin: 20px 0px;
+            justify-content: space-evenly;
+            height: 350px;
+
+        }
+
+        .card {
+            height: 320px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .card:hover {
+
+            background-color: rgb(206, 202, 202);
+            border-radius: 15px;
+
+        }
+
+        .img-card {
+            height: 100%;
+            width: 300px;
+            border-radius: 15px;
+            object-fit: cover;
+
+        }
+
+        .head {
+
+            text-align: center;
+            margin-top: 5px;
+
+        }
+
+        /* experties media query start */
+
+        @media(max-width:576px) {
+
+            .card-parent {
+                display: flex;
+                justify-content: space-evenly;
+                height: 200px;
+
+            }
+
+            .card{
+                height:170px;
+                
+            }
+
+            .hide{
+                display: none;
+            }
+
+            .head {
+                font-size: 16px;
+            }
+
+            .img-card {
+
+                height: 130px;
+                width: 80px;
+
+            }
+
+        }
+
+        /* experties media query end */
+
+
+
+        .main-services {
+            font-family: 'Poppins', sans-serif;
+            padding: 30px 0px;
+        }
+
+        .service-head {
+            font-size: 30px;
+            margin: 10px 0px 10px 0px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .services-2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .service-img {
+            width: 200px;
+            margin: 30px;
+            border-radius: 20px;
+            border: 1px solid#c7bdbd;
+        }
+
+        .service-img:hover {
+
+            animation-name: card-animation;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes card-animation {
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+
+        .facecare {
+            height: 150px;
+            width: 190px;
+            padding: 10px;
+        }
+
+        .lebel {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* services media query starts */
+        @media(max-width:576px) {
+            .service-head {
+                font-size: 25px;
+            }
+
+            .facecare {
+                height: 100px;
+                width: 110px;
+            }
+
+            .lebel {
+                font-size: 15px;
+            }
+        }
+
+        /*services media query end*/
+
+
+
+        .contact-main {
+            display: flex;
+            background-color: rgb(65, 57, 57);
+            ;
+            object-fit: cover;
+            color: blanchedalmond;
+        }
+
+
+        .contact {
+
+            font-size: 40px;
+            margin-left: 30px;
+        }
+
+        .contact-para {
+            margin-left: 27px;
+            font-size: 20px;
+        }
+
+        form {
+            margin-left: 27px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .submit {
+            height: 30px;
+            width: 120px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgb(255, 123, 211);
+            color: rgb(49, 43, 43);
+            border: none;
+            border-radius: 9px;
+            margin: 3px;
+        }
+
+        .infy {
+            margin-left: 160px;
+            width: 50%;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .infy-para {
+            font-size: 20px;
+        }
+
+
+        /*contact media query start*/
+        @media(max-width:576px) {
+            .contact {
+                font-size: 25px;
+            }
+
+            .contact-para {
+                font-size: 15px;
+            }
+
+            form {
+                font-size: 15px;
+            }
+
+            .submit {
+                width: 70px;
+                height: 20px;
+                font-size: 12px;
+            }
+
+            .infy {
+                margin-left: 40px;
+            }
+
+            .infy-para {
+                font-size: 12px;
+            }
+        }
+          /*contact media query end*/
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h3 style="margin: 8px 8px; font-size: 28px; font-weight: lighter;">
+            <a href="#" class="name" style="color: white; padding: 10px;  text-decoration: none;"> Ruksar's
+                <span
+                    style="color:rgb(255, 123, 211); text-decoration: none;padding-right: 3px;padding-left: 3px; text-decoration: none;">Makeup
+                </span> Studio</a>
+        </h3>
+
+        <navbar style="margin: 8px 0px;">
+            <a href="#home" class="nav ">Home</a>
+            <a href="#about" class="nav ">About</a>
+            <a href="#services" class="nav hide">Services</a>
+            <a href="#contact" class="nav">Contact</a>
+        </navbar>
+    </header>
+
+
+
+    <div class="img" id="home">
+        <div class="img-parent">
+            <h2 class="title">We <span style="color:rgb(214, 147, 21);">Are</span> Here !</h2>
+            <h3 class="title1">Ruksar's <span style="color:rgb(214, 147, 21);">Makeup</span> Studio</h3>
+            <h4 class="title2">Women's <span style="color: aliceblue;"> Beuty </span> Parlour</h4>
+            <p class="title3">Ruksar's Beuty Studio is new
+                and leading beuty parlour in karad</p>
+            <p class="title3"> We are delicated artists
+                and make you Face glow</p>
+            <p class="title3">We take care of your skin ,
+                face , hair.... </p>
+
+            <button class="btn">MemberShip</button>
+        </div>
+    </div>
+
+
+    <div class="main-about" id="about">
+        <div class="about">
+            <div class="img-about">
+                <img class="about-img" src="./Assets/beauty-experts_550.jpeg">
+            </div>
+
+            <div class="text-about">
+
+                <h3 class="head-about">About Us</h3>
+
+                <p class="about-para">Ruksar's Makeup studio is brand new beuty parlour locatted in karad.
+                    We provide all type of makeup for womens and We provide Body Massage based on customer need , We get
+                    Succesfully
+                    suevey about our work on bridal , hairstyles , mehndi , evening and basic makeup.</p>
+
+                <p class="about-para"> we offer you with 10% of discount in any of makeup and body massage if you visit
+                    Ruksar's makeup
+                    studio first time...
+
+                </p>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="main-service">
+
+            <h2 style="text-align: center;">Our Experties</h2>
+
+            <div class="card-parent">
+                <div class="card">
+                    <img class="img-card" src="./Assets/bridal.jpg">
+                    <h3 class="head">Bridal <span class="hide">Makeup</span></h3>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="./Assets/Bridal-Mehndi-Designs-for-Back-Hand.jpg">
+                    <h3 class="head">Mehandi</h3>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="./Assets/hairstylist-819x1024.jpg">
+                    <h3 class="head">Hairstles</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="main-services" id="services">
+        <h2 class="service-head"> Our Services</h2>
+        <div class="services">
+
+
+            <div class="service-img">
+                <img class="facecare" src="./Assets/face care.jpg">
+                <p class="lebel">Facecare</p>
+            </div>
+
+            <div class="service-img">
+                <img class="facecare" src="./Assets/make2.jpg">
+                <p class="lebel">Makeup</p>
+            </div>
+
+
+            <div class="service-img">
+                <img class="facecare" src="./Assets/mehandi-service.jpg">
+                <p class="lebel">Mehandi Art</p>
+            </div>
+
+        </div>
+
+
+        <div class="services-2">
+            <div class="service-img">
+                <img class="facecare" src="./Assets/body  massage.jpg">
+                <p class="lebel">Body massage</p>
+            </div>
+
+
+            <div class="service-img">
+                <img class="facecare" src="./Assets/hairstle.jpg">
+                <p class="lebel">Hairstyle</p>
+            </div>
+
+
+            <div class="service-img">
+                <img class="facecare" src="./Assets/waxing.jpg">
+                <p class="lebel">Waxing</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <section class="contact-main" id="contact">
+        <div>
+            <h2 class="contact">Contact <span style="color:rgb(255, 123, 211)">us</span> </h2>
+            <p class="contact-para">Feel free to contact us any time. We will get back as soon as we can </p>
+            <form>
+                <label>Name :</label>
+                <input type="text"><br><br>
+
+                <label>Email Address :</label>
+                <input type="email"><br><br>
+
+                <label>Phone Number :</label>
+                <input type="number"><br><br>
+
+                <button class="submit"> Reset</button>
+                <button class="submit"> Submit</button>
+
+
+            </form>
+        </div>
+
+        <div class="infy">
+
+            <h2 style="font-size: 30px;">I<span style="color:rgb(255, 123, 211);">nfo</span></h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chat-square-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+            </svg> <span class="infy-para">ruksarmujawar0803@gmail.com</span><br><br>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg> <span class="infy-para">778899006655</span><br><br>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg> <span class="infy-para">ruksarmujawar0803</span><br><br>
+
+
+        </div>
+    </section>
+</body>
+</html>
